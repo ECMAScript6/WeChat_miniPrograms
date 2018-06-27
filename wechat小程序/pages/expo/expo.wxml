@@ -1,0 +1,93 @@
+<!--pages/expo/expo.wxml-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<view class="page">
+
+
+                    <view wx:if="{{passkey===true}}">
+
+    <view class="page__hd">
+        <view class="icon-box2">
+            <icon type="info_circle" size="23" class="infoico"></icon>
+            <view class="icon-box__ctn2">
+                <view class="icon-box__title2">提示</view>
+                <view class="icon-box__desc2">服务器每小时更新一次展位图，请下拉刷新同步数据(每次更新耗时5分钟)</view>
+            </view>
+        </view>
+
+
+
+    </view>
+
+
+                            
+    <view class="page__bd">
+        <view class="weui-article">
+            <view class="weui-article__section">
+
+                <view wx:for="{{postList}}" wx:for-index="idx" wx:for-item="item"class="weui-article__section">
+                
+                    <view class="weui-article__h3"><icon type="success" size="23" class='infoico'></icon>{{item.expoName}}-{{newtime}}</view>
+
+                    <view class="weui-article__p">
+
+                        <image bindtap="imgExpo" class="weui-article__img" src="{{item.expoSrc}}" mode="aspectFit" data-list="{{item.expo_url}}{{codeurl}}" data-src="{{item.expo_url}}{{codeurl}}"/>
+                    </view>
+                </view>
+
+            </view>
+        </view>
+    </view>
+                              </view>
+
+                              <view wx:else>
+
+        <view class="icon-box">
+            <icon type="info" size="60"></icon>
+            <view class="icon-box__ctn">
+
+                <view class="icon-box__desc">员工验证</view>
+            </view>
+        </view>
+
+
+<form bindsubmit="formSubmit">
+        <view class="weui-cells__title"></view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__bd">
+                    <input id="username" name="username" class="weui-input" placeholder="请输入员工号码" />
+                </view>
+            </view>
+        </view>
+
+                              
+
+
+
+        <view class="weui-msg__opr-area">
+            <view class="weui-btn-area">
+                <button formType="submit"  class="weui-btn" type="default">验证</button>
+            </view>
+        </view>
+ </form>                             
+                              
+                              
+                              
+                              
+                              </view>
+
+
+</view>

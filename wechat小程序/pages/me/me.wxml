@@ -1,0 +1,90 @@
+<!--pages/me/me.wxml-->
+<view class="page">
+<view class="page__bd">
+
+<view class="weui-cells__title"></view><!--kkkkkkk-->
+<view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+                    <image src="{{userInfo.avatarUrl}}" style="width: 60px; height: 60px; display: block"/>
+                    <view class="weui-badge" style="position: absolute;top: -.4em;right: -.4em;">2</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <view>{{userInfo.nickName}}</view>
+                    <view style="font-size: 13px;color: #888888;">钻石会员</view>
+                </view>
+            </view>
+</view>
+
+
+        
+              <view class="weui-cells__title"></view><!--kkkkkkk-->
+              
+        <view class="weui-cells weui-cells_after-title">
+        <!--###-->
+            <view class="weui-cell weui-cell_access">
+
+            <image src="/pages/images/cards.png" style="padding-right:10px;width: 30px; height: 30px; display: block"/><!--img-->
+
+                <view class="weui-cell__bd">我的二维码</view>
+                <view bindtap='jump1'  class="weui-cell__ft weui-cell__ft_in-access" style="font-size: 0">
+                    <view style="display: inline-block;vertical-align:middle; font-size: 17px;">详细信息</view>
+                    <view class="weui-badge weui-badge_dot" style="margin-left: 5px;margin-right: 5px;"></view>
+                </view>
+            </view>
+        <!--###-->
+        </view>
+
+      <view class="weui-cells__title"></view><!--kkkkkkk-->
+      <view class="weui-cells weui-cells_after-title">
+      <!--###-->
+            <view class="weui-cell weui-cell_access">
+
+            <image src="/pages/images/sticker.png" style="padding-right:10px;width: 30px; height: 30px; display: block"/><!--img-->
+
+                <view class="weui-cell__bd"><view style="display: inline-block; vertical-align: middle">姓名</view>
+            </view>
+                
+                <view  class="weui-cell__ft weui-cell__ft_in-access" style="font-size: 0">
+                    <view  style="display: inline-block;vertical-align:middle; font-size: 17px;">{{userInfo.nickName}}</view>
+                    
+                </view>
+            </view>
+            <!--###-->
+            <view class="weui-cell weui-cell_access">
+                <view class="weui-cell__bd">
+                    <view style="display: inline-block; vertical-align: middle">语言</view>
+                </view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">{{userInfo.language}}</view>
+            </view>
+            <!--###-->
+            <view class="weui-cell weui-cell_access">
+                <view class="weui-cell__bd">
+                    <view style="display: inline-block; vertical-align: middle">地区</view>
+                    
+                </view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">{{userInfo.country}}-{{userInfo.province}}</view>
+            </view>
+            <!--###-->
+            <view class="weui-cell weui-cell_access">
+                <view class="weui-cell__bd">
+                    <view style="display: inline-block; vertical-align: middle">我的地址</view>
+                </view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">{{userInfo.city}}</view>
+            </view>
+
+
+
+
+
+
+
+
+
+
+
+
+        </view>
+</view>
+</view>
+        

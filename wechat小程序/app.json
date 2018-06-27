@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/expo/expo",
+    "pages/expo/images/images"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "展位图",
+    "navigationBarTextStyle": "black"
+  }
+}

@@ -1,0 +1,3 @@
+/* pages/expo/expo.wxss */
+@import '/style/weui.wxss';
+button {margin: 10px;}
